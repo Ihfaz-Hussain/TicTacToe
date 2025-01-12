@@ -54,12 +54,22 @@ int checkDraw(char grid[ROW_SIZE][COL_SIZE]){
     }
     return 1;
 }
+
+void displayMenu() {
+    printf("\n--- Main Menu ---\n");
+    printf("1. Start Game\n");
+    printf("2. End Game\n");
+    printf("3. Leave a Review\n");
+    printf("Enter your choice: ");
+}
+
 int main(){
     char player1, player2; //to hold the symbol for each player
     char grid[ROW_SIZE][COL_SIZE]; //initialize grid for the game
     int rowInput, colInput; //ask user for their option 
     int turn = 0; //to keep track of which players move it is, 1st players move will be even, 2nd players move will be odd   
     char currentPlayer;
+    int choice;
     //loop through the row
     for(int i = 0; i<ROW_SIZE; i++){
         //loop through the col
